@@ -92,10 +92,10 @@ export function Header() {
 
     <DropdownMenuItem asChild>
       <Link
-        href="https://app.netlify.com/projects/atharvaa-dev-v2-1/configuration/general"
+        href="https://atharvaa-dev-v2-1.netlify.app/"
         className="w-full text-sm"
       >
-        Version 2
+        Version 2.1
       </Link>
     </DropdownMenuItem>
 
