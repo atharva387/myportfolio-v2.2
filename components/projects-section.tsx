@@ -33,7 +33,7 @@ const projects = [
       "Intelligent restaurant reservation platform with real-time availability, smart recommendations, and seamless payment integration.",
     technologies: ["Java", "Firebase", "Android Studio", "Real-time DB"],
     image: "/bookmytable.png?height=300&width=500",
-    github: "https://github.com/atharva387/BookMyTableWeb",
+    github: "https://github.com/atharva387",
   },
   {
     title: "Credit Card Approval Prediction",
@@ -48,7 +48,7 @@ const projects = [
     description: "A short-code service provider compony",
     technologies: ["HTML", "CSS","Javascript","API","Chatbot"],
     image: "/telcos.png",
-    github: "https://github.com/atharva387/telcosIQ",
+    github: "https://github.com/atharva387",
     live: "https://telcosiq.netlify.app/",
   },
   {
@@ -56,7 +56,7 @@ const projects = [
     description: "pune's leading Photographer portfolio",
     technologies: ["HTML", "SCSS","javascript"],
     image: "/hh.png",
-    github: "https://github.com/atharva387/photographyportfolio",
+    github: "https://github.com/atharva387",
     live: "https://hh-photography.netlify.app/",
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     description: "A clean and responsive product catalog website for Priya Sales, showcasing industrial tools and equipment with easy browsing and contact options.",
     technologies: ["ReactJS", "CSS"],
     image: "/leo.png",
-    github: "https://github.com/atharva387",
+    github: "https://priyasales.netlify.app/",
     live: "https://cafeleos.netlify.app/",
   },
   {
@@ -73,7 +73,7 @@ const projects = [
     technologies: ["HTML", "SCSS","javascript","API"],
     image: "/ps.png",
     github: "https://github.com/atharva387",
-    live: "https://priyasales.netlify.app/",
+    live: "https://hh-photography.netlify.app/",
   },
 ]
 

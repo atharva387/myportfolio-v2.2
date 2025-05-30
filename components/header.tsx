@@ -92,9 +92,7 @@ export function Header() {
 
     <DropdownMenuItem asChild>
       <Link
-        href="https://version2.example.com"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://app.netlify.com/projects/atharvaa-dev-v2-1/configuration/general"
         className="w-full text-sm"
       >
         Version 2
@@ -104,8 +102,6 @@ export function Header() {
     <DropdownMenuItem asChild>
       <Link
         href="/"
-        target="_blank"
-        rel="noopener noreferrer"
         className="w-full text-sm"
       >
         Current Version
