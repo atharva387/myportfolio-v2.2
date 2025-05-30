@@ -33,7 +33,7 @@ const projects = [
       "Intelligent restaurant reservation platform with real-time availability, smart recommendations, and seamless payment integration.",
     technologies: ["Java", "Firebase", "Android Studio", "Real-time DB"],
     image: "/bookmytable.png?height=300&width=500",
-    github: "https://github.com/atharva387",
+    github: "https://github.com/atharva387/BookMyTableWeb",
   },
   {
     title: "Credit Card Approval Prediction",
@@ -64,7 +64,7 @@ const projects = [
     description: "A clean and responsive product catalog website for Priya Sales, showcasing industrial tools and equipment with easy browsing and contact options.",
     technologies: ["ReactJS", "CSS"],
     image: "/leo.png",
-    github: "https://priyasales.netlify.app/",
+    github: "https://github.com/atharva387",
     live: "https://cafeleos.netlify.app/",
   },
   {
@@ -73,7 +73,7 @@ const projects = [
     technologies: ["HTML", "SCSS","javascript","API"],
     image: "/ps.png",
     github: "https://github.com/atharva387",
-    live: "https://hh-photography.netlify.app/",
+    live: "https://priyasales.netlify.app/",
   },
 ]
 
