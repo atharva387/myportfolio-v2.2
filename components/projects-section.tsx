@@ -48,7 +48,7 @@ const projects = [
     description: "A short-code service provider compony",
     technologies: ["HTML", "CSS","Javascript","API","Chatbot"],
     image: "/telcos.png",
-    github: "https://github.com/atharva387",
+    github: "https://github.com/atharva387/telcosIQ",
     live: "https://telcosiq.netlify.app/",
   },
   {
@@ -56,7 +56,7 @@ const projects = [
     description: "pune's leading Photographer portfolio",
     technologies: ["HTML", "SCSS","javascript"],
     image: "/hh.png",
-    github: "https://github.com/atharva387",
+    github: "https://github.com/atharva387/photographyportfolio",
     live: "https://hh-photography.netlify.app/",
   },
   {
