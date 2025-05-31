@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Code2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -49,7 +50,7 @@ export function Header() {
             <Code2 size={20} className="text-white" />
           </div>
           <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Atharva
+            Atharva.dev
           </span>
         </motion.div>
 

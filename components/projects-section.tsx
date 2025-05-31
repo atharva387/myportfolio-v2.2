@@ -6,7 +6,81 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Github, ExternalLink, Star } from "lucide-react"
 import Image from "next/image"
+// Just above or below ProjectsSection
+function ExpandableCard({ project }: { project: typeof projects[number] }) {
+  const [isOpen, setIsOpen] = useState(false)
 
+  return (
+    <Card
+      className="overflow-hidden border-border/50 hover:border-blue-500/50 backdrop-blur-sm bg-card/50 transition-all duration-300 relative"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {project.featured && (
+        <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+          <Star size={12} />
+          FEATURED
+        </div>
+      )}
+
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={project.image || "/placeholder.svg"}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+
+      <CardHeader>
+        <CardTitle className="text-xl">{project.title}</CardTitle>
+        {isOpen && <CardDescription>{project.description}</CardDescription>}
+      </CardHeader>
+
+      {isOpen && (
+        <CardContent>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-2 py-1 bg-muted text-muted-foreground rounded-md text-xs hover:bg-blue-500/10 hover:text-blue-500 transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex gap-3">
+            <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
+              >
+                <Github size={12} />
+                Code
+              </a>
+            </Button>
+
+            {project.live && (
+              <Button variant="outline" size="sm">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1"
+                >
+                  <ExternalLink size={12} />
+                  Live Demo
+                </a>
+              </Button>
+            )}
+          </div>
+        </CardContent>
+      )}
+    </Card>
+  )
+}
 const projects = [
   {
     title: "One-Umbrella",
@@ -60,20 +134,20 @@ const projects = [
     live: "https://hh-photography.netlify.app/",
   },
   {
-    title: "HH Photography",
+    title: "Cafe Leo's",
     description: "A clean and responsive product catalog website for Priya Sales, showcasing industrial tools and equipment with easy browsing and contact options.",
     technologies: ["ReactJS", "CSS"],
     image: "/leo.png",
-    github: "https://priyasales.netlify.app/",
+    github: "https://github.com/atharva387/CafeLeos",
     live: "https://cafeleos.netlify.app/",
   },
   {
-    title: "HH Photography",
+    title: "Priya Sales Store",
     description: "A modern and inviting website for Cafe Leos, highlighting its menu, ambiance, and contact details to attract food lovers and cafe-goers.",
     technologies: ["HTML", "SCSS","javascript","API"],
     image: "/ps.png",
-    github: "https://github.com/atharva387",
-    live: "https://hh-photography.netlify.app/",
+    github: "https://github.com/atharva387/PriyaSales",
+    live: "https://priyasales.netlify.app/",
   },
 ]
 
@@ -100,6 +174,18 @@ export function ProjectsSection() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {visibleProjects.map((project, index) => (
+  <motion.div
+    key={project.title}
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    viewport={{ once: true }}
+  >
+    <ExpandableCard project={project} />
+  </motion.div>
+))}
+
+          {/* {visibleProjects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
@@ -171,7 +257,7 @@ export function ProjectsSection() {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
+          ))} */}
         </div>
 
         {projects.length > 4 && (
