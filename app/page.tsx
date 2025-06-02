@@ -32,7 +32,7 @@ export default function Home() {
         <StartupAnimation onComplete={handleLoadingComplete} />
       ) : (
         <main className="min-h-screen bg-background relative">
-          <BackgroundEffect />
+          
           <ScrollProgress />
           <Header />
           <HeroSection />
