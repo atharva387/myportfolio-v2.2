@@ -222,7 +222,7 @@ x: [
   }}
 /> 
  */}
-              <motion.div
+              {/* <motion.div
                 className="absolute top-10 right-10 w-4 h-4 bg-blue-500 rounded-full"
                 animate={{ y: [0, -30, 0] }}
                 transition={{
@@ -231,12 +231,12 @@ x: [
                   repeatType: "loop",
                   ease: "easeOut",
                 }}
-              />
-              <motion.div
+              /> */}
+              {/* <motion.div
                 className="absolute bottom-10 left-10 w-6 h-6 border-2 border-purple-500 rounded-full"
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity }}
-              />
+              /> */}
             </div>
           </motion.div>
         </div>
