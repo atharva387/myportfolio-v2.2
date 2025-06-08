@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const experiences = [
   {
-    company: "QuantumSky Info Pvt. Ltd.",
+    company: "Sofsyst Software & Systems Private Limited",
     position: "Software Developer",
     duration: "Jul 2023–Present",
     location: "Pune, India",
